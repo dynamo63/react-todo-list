@@ -24,7 +24,11 @@ const useStyles = makeStyles({
  * @param {Number} nbWords - number of words 
  */
 function truncateWords (str, nbWords = 5) {
-    return str.split(' ').splice(0, nbWords).join(' ').concat('...');
+    const words = str.split(' ');
+    if (words.length >= 5) {
+        return words.splice(0, nbWords).join(' ').concat('...');
+    }
+    return words;
 }
 
 function ToDoItem (props) {
