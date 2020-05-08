@@ -1,0 +1,13 @@
+form{
+    width: 90%;
+    margin: .5em auto;
+    height: 80vh;
+
+    & > div{
+        margin: 1em 0;
+    }
+}
+
+.my-editor{
+    height: 35vh;
+}

@@ -1,11 +1,14 @@
 import React from 'react';
-import './App.css';
+import NavBar from './components/NavBar';
+import InputForm from './components/InputForm';
 
 function App() {
+
   return (
-    <div className="App">
-      <h1>Hello Wolrd</h1>
-    </div>
+    <>
+      <InputForm />
+      <NavBar />
+    </>
   );
 }
 
