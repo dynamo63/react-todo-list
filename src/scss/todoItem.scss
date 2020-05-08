@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css?family=Balsamiq+Sans&display=swap');
+
+%border{
+    border-left-width: 4px;
+    border-left-style: solid;
+}
+
+.is-important{
+    @extend %border;
+    border-left-color: #ef6c00;
+}
+
+.is-none{
+    @extend %border;
+    border-left-color: #424242;
+}
+
+.is-easy{
+    @extend %border;
+    border-left-color: #039be5;
+}
+
+.is-urgent{
+    @extend %border;
+    border-left-color: #e53935;
+}
+
+// Cuztomize the Typography item
+// .MuiListItemText-primary{
+//     font-family: 'Balsamiq Sans', cursive !important;
+// }
