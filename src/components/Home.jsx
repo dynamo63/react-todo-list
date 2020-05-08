@@ -2,6 +2,7 @@ import React from 'react';
 import { Typography, makeStyles, List } from '@material-ui/core';
 import ToDoItem from './ToDoItem';
 import '../scss/home.scss';
+import { useSelector } from 'react-redux';
 
 const useStyles = makeStyles({
     title:{
@@ -17,6 +18,7 @@ const useStyles = makeStyles({
 function Home() {
 
     const classes = useStyles()
+    const taskList = useSelector(state => state.tasks)
     return (
         <>
             <header>
@@ -25,8 +27,7 @@ function Home() {
                 </Typography>
             </header>
             <List className={classes.list}>
-                <ToDoItem title="My Fist Task" grade={0} />
-                <ToDoItem title="Second" grade={2} />
+                {taskList.map(task => <ToDoItem title={task.title} grade={task.grade} id={task.id} key={task.id} /> )}
             </List>
         </>
     );
