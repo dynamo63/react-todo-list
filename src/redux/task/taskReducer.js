@@ -1,4 +1,4 @@
-import { COMPLETED } from "./taskTypes";
+import { COMPLETED, ADD_TASK } from "./taskTypes";
 
 const initialState = {
     tasks:[
@@ -21,6 +21,14 @@ const taskReducer = (state = initialState, action) => {
                 tasks
             }
 
+        }
+        case ADD_TASK:{
+            const tasks = state.tasks;
+            tasks.push(action.payload)
+            return {
+                ...state,
+            tasks
+            }
         }
     
         default: return state;

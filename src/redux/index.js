@@ -1,1 +1,1 @@
-export { finish } from './task/taskAction';
+export { finish, addTask } from './task/taskAction';
