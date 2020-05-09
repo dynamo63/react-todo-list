@@ -3,6 +3,7 @@ import { Typography, makeStyles, List } from '@material-ui/core';
 import ToDoItem from './ToDoItem';
 import '../scss/home.scss';
 import { useSelector } from 'react-redux';
+// import { withRouter } from 'react-router-dom';
 
 const useStyles = makeStyles({
     title:{
@@ -18,7 +19,7 @@ const useStyles = makeStyles({
 function Home() {
 
     const classes = useStyles()
-    const taskList = useSelector(state => state.tasks)
+    const taskList = useSelector(state => state.tasks.filter(task => task.completed === false))
     return (
         <>
             <header>
