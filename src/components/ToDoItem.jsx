@@ -4,6 +4,7 @@ import '../scss/todoItem.scss';
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 import { finish } from '../redux';
+import { truncateWords } from '../utils';
 
 const useStyles = makeStyles({
     root:{
@@ -17,19 +18,6 @@ const useStyles = makeStyles({
         fontSize: '1.3em'
     }
 });
-
-/**
- * Truncate the sentence str with a number of words
- * @param {String} str - sentence to truncate
- * @param {Number} nbWords - number of words 
- */
-function truncateWords (str, nbWords = 5) {
-    const words = str.split(' ');
-    if (words.length >= 5) {
-        return words.splice(0, nbWords).join(' ').concat('...');
-    }
-    return words;
-}
 
 function ToDoItem (props) {
     const classes = useStyles();

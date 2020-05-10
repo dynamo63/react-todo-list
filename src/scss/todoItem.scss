@@ -5,24 +5,36 @@
     border-left-style: solid;
 }
 
+$color-important:#ef6c00;
+$color-none:#424242;
+$color-easy:#039be5;
+$color-urgent:#e53935;
+
 .is-important{
     @extend %border;
-    border-left-color: #ef6c00;
+    border-left-color: $color-important;
 }
 
 .is-none{
     @extend %border;
-    border-left-color: #424242;
+    border-left-color: $color-none;
 }
 
 .is-easy{
     @extend %border;
-    border-left-color: #039be5;
+    border-left-color: $color-easy;
 }
 
 .is-urgent{
     @extend %border;
-    border-left-color: #e53935;
+    border-left-color: $color-urgent;
+}
+
+:export{
+    important:$color-important;
+    none:$color-none;
+    easy:$color-easy;
+    urgent:$color-urgent;
 }
 
 // Cuztomize the Typography item

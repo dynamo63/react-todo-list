@@ -5,6 +5,7 @@ import Home from './components/Home';
 import { Provider } from 'react-redux';
 import store from './redux/store';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import CompletedContainer from './components/CompletedContainer';
 
 function App() {
 
@@ -16,9 +17,7 @@ function App() {
             <Home />
           </Route>
           <Route path="/completed">
-            <h1>
-              Section Completed
-            </h1>
+            <CompletedContainer/>
           </Route>
           <Route path="/task/add">
             <InputForm />

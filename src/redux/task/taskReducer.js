@@ -2,10 +2,10 @@ import { COMPLETED, ADD_TASK } from "./taskTypes";
 
 const initialState = {
     tasks:[
-        {id:1, title: "My First Task", grade: 1,completed: false},
-        {id:2, title: "My Second Task", grade: 2,completed: false},
-        {id:3, title: "My Third Task", grade: 3,completed: false},
-        {id:4, title: "Lorem ipsum dolor, sit amet consectetur adipisicing", grade: 0,completed: false}
+        {id:1, description: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore, unde!",title: "My First Task", grade: 1,completed: false},
+        {id:2, description: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore, unde!",title: "My Second Task", grade: 2,completed: false},
+        {id:3, description: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore, unde!",title: "My Third Task", grade: 3,completed: false},
+        {id:4, description: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore, unde!",title: "Lorem ipsum dolor, sit amet consectetur adipisicing", grade: 0,completed: false}
     ]
 }
 
