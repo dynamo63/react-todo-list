@@ -11,7 +11,7 @@ function App() {
 
   return (
     <Provider store={store}>
-    <BrowserRouter>
+      <BrowserRouter>
         <Switch>
           <Route path="/" exact>
             <Home />
@@ -24,8 +24,8 @@ function App() {
           </Route>
         </Switch>
         <NavBar />
-    </BrowserRouter>
-      </Provider>
+      </BrowserRouter>
+    </Provider>
   );
 }
 
